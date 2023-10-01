@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="w-2/4 mt-10 mx-auto">
+      <form
+        action="/api/v1/service"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="flex flex-col lg:w-3/5 w-10/12 mb-8 mx-auto">
+          <input
+            type="text"
+            name="serviceName"
+            placeholder="Service Name"
+            class="bg-transparent text-sm border-b-2 border-gray-300 outline-none transition duration-500 ease-linear delay-100 focus:border-slate-500"
+          />
+        </div>
+        <div class="flex flex-col lg:w-3/5 w-10/12 mb-8 mx-auto">
+          <input
+            type="text"
+            name="serviceID"
+            placeholder="Service ID"
+            class="bg-transparent text-sm border-b-2 border-gray-300 outline-none transition duration-500 ease-linear delay-100 focus:border-slate-500"
+          />
+        </div>
+        <div class="flex flex-col lg:w-3/5 w-10/12 mb-8 mx-auto">
+          <input
+            type="text"
+            name="serviceDesc"
+            placeholder="Service Description"
+            class="bg-transparent text-sm border-b-2 border-gray-300 outline-none transition duration-500 ease-linear delay-100 focus:border-slate-500"
+          />
+        </div>
+        <div class="lg:w-3/5 w-10/12 mb-1 mx-auto">
+          <label
+            for="logo"
+            class="bg-slate-200 py-2 px-4 rounded-md font-semibold text-xs hover:cursor-pointer"
+          >
+            Upload logo +
+          </label>
+        </div>
+        <div class="flex flex-col lg:w-3/5 w-10/12 mb-8 mx-auto">
+          <input
+            type="file"
+            multiple
+            name="logo"
+            id="logo"
+            placeholder="Service Description"
+            class="hidden bg-transparent text-sm border-b-2 border-gray-300 outline-none transition duration-500 ease-linear delay-100 focus:border-slate-500"
+          />
+        </div>
+
+        <div class="mx-auto lg:w-3/5 w-10/12 text-right">
+          <input
+            type="submit"
+            value="Submit"
+            class="py-2 px-8 text-sm w-full lg:w-fit bg-slate-500 rounded-md text-white font-semibold shadow-lg hover:shadow-sm hover:cursor-pointer transition-all duration-500 ease-in-out delay-75 scale-100"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
