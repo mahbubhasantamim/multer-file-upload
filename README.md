@@ -59,14 +59,10 @@ import { useState } from "react";
       const formData = new FormData();
       if (selectedFile) {
         formData.append("serviceLogo", selectedFile);
-        formData.append("serviceName", data.serviceName);
-        formData.append("serviceID", data.serviceID);
-        formData.append("serviceDesc", data.serviceDesc);
-      } else {
-        formData.append("serviceName", data.serviceName);
-        formData.append("serviceID", data.serviceID);
-        formData.append("serviceDesc", data.serviceDesc);
       }
+      formData.append("serviceName", data.serviceName);
+      formData.append("serviceID", data.serviceID);
+      formData.append("serviceDesc", data.serviceDesc);
 
       //fetch api
       const response = await axios.post(
